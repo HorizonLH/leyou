@@ -1,0 +1,7 @@
+{
+  "timestamp": "2019-11-21T15:50:25.677+0000",
+  "status": 400,
+  "error": "Bad Request",
+  "message": "Required List parameter 'cids' is not present",
+  "path": "/brand"
+}

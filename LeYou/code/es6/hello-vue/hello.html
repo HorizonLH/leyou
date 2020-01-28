@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .active{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+<!--vue对象的HTML模板-->
+<div id="app">
+    <input type="text" v-model="search">
+
+    <hr>
+
+    <h1>您的生日是：{{
+        new Date(birthday).getFullYear() + '-'+ new Date(birthday).getMonth()+ '-' + new Date(birthday).getDay()
+        }}
+    </h1>
+    <h1>您的生日是：{{ bir()}}</h1>
+    <h1>您的生日是：{{ bir1}}</h1>
+    <hr>
+
+    <input type="text" v-model="store"><br>
+    <input type="button" :class="{active: store > 0} " value="加入购物车">
+
+    <hr>
+
+    <input type="button" :value="value"  @click="random=Math.random()"> {{random}}<br>
+    <span v-if="random > 0.75" >看到说明大于0.75的</span>
+    <span v-else-if="random > 0.5" >看到说明大于0.5的</span>
+    <span v-else="random > 0.25" >看到说明大于0的</span>
+    <hr>
+
+
+    <input type="button" value="生成随机数"  @click="show=!show"><br>
+
+    <span v-if="show" >true  if</span> <br>
+    <span v-show="show">true  show</span>
+    <hr>
+    <ul>
+        <li v-for="(val,key,index) in user" :key="index">{{index+1}}.{{key}}:{{val}}</li>
+    </ul>
+    <hr>
+
+    <ul>
+        <li v-for="(user,index) in users">{{index+1}}.{{user.name}}-{{user.gender}}-{{user.age}}</li>
+    </ul>
+
+
+    <input type="checkbox" value="ios" v-model="language">ios<br>
+    <input type="checkbox" value="java" v-model="language">java<br>
+    <input type="checkbox" value="php" v-model="language">php<br>
+    你选择了{{language.join(",")}}<br>
+
+
+    <!--双向绑定  v-model:数据模型-->
+    <input type="text" v-model="num" @keyup.alt.enter="submit">
+    <!--v-on:时间名=js表达式-->
+    <input type="button" value="按钮" v-on:click="incr">
+    <input type="button" value="按钮" @contextmenu.prevent="incr">
+    <!--花括号：js表达式-->
+    <h1>hello {{name}}，有{{sum()}}  </h1>
+    <!--v-text-->
+    <h1>hello <span v-text="name">啊啊啊</span>，有{{sum()}}  </h1>
+    <!--v-html-->
+    <h1>hello <span v-html="name">啊啊啊</span>，有{{sum()}}  </h1>
+
+</div>
+</body>
+
+<script src="node_modules/vue/dist/vue.js"></script>
+<script>
+    /*
+        初始化一个vue实例
+     */
+    const app = new Vue({
+        el: "#app", //el:element的缩写
+        data: {     //定义数据模型
+            name: "<span style='color: chartreuse;'>卢本伟</span>",
+            num: 100,
+            language: [],
+            users:[
+                {name:'柳岩', gender:'女', age: 21},
+                {name:'峰哥', gender:'男', age: 18},
+                {name:'范冰冰', gender:'女', age: 24},
+                {name:'刘亦菲', gender:'女', age: 18},
+                {name:'古力娜扎', gender:'女', age: 25}
+            ],
+            user:{name:'柳岩', gender:'女', age: 21},
+            show: true,
+            random:0,
+            value: "生成随机数",
+            store:0,
+            birthday: 1529032123201,
+            search:""
+        },
+        watch:{
+            search(v1,v2){
+                console.log(v1,v2);
+
+            }
+        },
+        methods:{ //定义方法
+            incr(){
+                console.log(this);
+                this.num++;
+            },
+            sum(){
+                return this.num + 100;
+            },
+            submit() {
+                console.log("提交");
+            },
+            bir(){
+                const date = new Date(this.birthday);
+                return date.getFullYear() +"-" +date.getMonth()+"-"+date.getDay() ;
+            }
+        },
+        computed:{
+          bir1(){
+              const date = new Date(this.birthday);
+              return date.getFullYear() +"-" +date.getMonth()+"-"+date.getDay() ;
+          }
+        },
+        created(){
+            //ajax
+            this.num=10000;
+        }
+    })
+
+</script>
+
+</html>

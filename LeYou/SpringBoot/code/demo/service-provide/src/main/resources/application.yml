@@ -1,0 +1,24 @@
+server:
+  port: 8098
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///mybatis?serverTimezone=UTC   #???MySQL?????The server time zone value '??????????' is unrecogni??????????
+    username: root                                  #??MySQL??URL?????????serverTimezone=UTC??
+    password: lhm629728
+  application:
+    name: service-provide
+mybatis:
+  type-aliases-package: cn.xawl.service.pojo
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka
+    register-with-eureka: true #服务提供方启动时，会检测该参数是否为true，默认为true--->注册给eureka
+  instance:
+    lease-renewal-interval-in-seconds: 5 #心跳时间
+    lease-expiration-duration-in-seconds: 15 #过期时间
+
+

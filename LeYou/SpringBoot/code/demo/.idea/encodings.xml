@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://D:/BaiduNetdiskDownload/乐优商城-11月版/leyou/day15-rabbitMQ/资料/itcast-rabbitmq" charset="UTF-8" />
+    <file url="file://D:/BaiduNetdiskDownload/乐优商城-11月版/leyou/day15-rabbitMQ/资料/itcast-rabbitmq/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/download" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/download/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/elasticsearch" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/elasticsearch/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka/src/main/resources/application.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/http-demo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/http-demo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-provide" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-provide/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-provide/src/main/resources/application.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/user/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zuul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zuul/src/main/java" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,5 @@
+spring:
+  data:
+    elasticsearch:
+      cluster-name: my-application #elasticsearch
+      cluster-nodes: 192.168.170.128:9300  #springboot版本必须和elasticsearch版本同步

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+
+    <counter></counter>
+    <counter></counter>
+    <counter></counter>
+
+</div>
+</body>
+
+<script src="node_modules/vue/dist/vue.js"></script>
+
+<script>
+
+    Vue.component("counter",{
+        template:"<button @click='num++'>点我加1  {{num}}</button>",
+        data(){
+            return{
+                num:0
+            }
+        }
+    });
+
+    const app = new Vue({
+        el: "#app"
+    });
+
+</script>
+
+</html>

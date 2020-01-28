@@ -1,0 +1,25 @@
+server:
+  port: 8089
+spring:
+  application:
+    name: service-consumer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka #该地方为defaultZone
+    fetch-registry: true #
+    instance-info-replication-interval-seconds: 5 #每隔5秒更新一次
+
+service-provide:  #服务提供方的服务id
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000 #设置hystrix的超时时间为6000ms
+feign:
+  hystrix:
+    enabled: true #开启feign的熔断功能

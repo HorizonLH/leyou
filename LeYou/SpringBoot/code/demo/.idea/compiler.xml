@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="user" />
+        <module name="zuul" />
+        <module name="dysms-demo" />
+        <module name="eureka" />
+        <module name="http-demo" />
+        <module name="itcast-rabbitmq" />
+        <module name="download" />
+        <module name="service-provide" />
+        <module name="springboot" />
+        <module name="elasticsearch" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="download" target="1.8" />
+      <module name="dysms-demo" target="1.5" />
+      <module name="elasticsearch" target="1.8" />
+      <module name="eureka" target="1.8" />
+      <module name="http-demo" target="1.8" />
+      <module name="itcast-rabbitmq" target="1.8" />
+      <module name="service-consumer" target="1.8" />
+      <module name="service-provide" target="1.8" />
+      <module name="springboot" target="1.8" />
+      <module name="user" target="1.8" />
+      <module name="zuul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="download" options="-parameters" />
+      <module name="elasticsearch" options="-parameters" />
+      <module name="eureka" options="-parameters" />
+      <module name="http-demo" options="-parameters" />
+      <module name="itcast-rabbitmq" options="-parameters" />
+      <module name="service-consumer" options="-parameters" />
+      <module name="service-provide" options="-parameters" />
+      <module name="springboot" options="-parameters" />
+      <module name="user" options="-parameters" />
+      <module name="zuul" options="-parameters" />
+    </option>
+  </component>
+</project>
